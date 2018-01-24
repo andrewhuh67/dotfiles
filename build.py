@@ -30,7 +30,7 @@ def create_digital_ocean_vps():
     api_data['size']   = '1gb'
     api_data['image']  = 'ubuntu-16-04-x64'
     headers = {}
-    headers['Authorization'] = 'Bearer {mac_pa_token}'.format(mac_pa_token=mac_pa_token)
+    headers['Authorization'] = 'Bearer {pa_token}'.format(pa_token=pa_token)
     headers['Content-Type'] = 'application/json'
     api_data['ssh_keys'] = ['{ssh_key_id}'.format(ssh_key_id=input('Please enter your SSH key'))] # FIXME
     api_data['tags'] = ['test']
